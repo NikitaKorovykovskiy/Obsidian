@@ -1,0 +1,6 @@
+{
+	"nodes":[
+		{"id":"2ca3a57693dfff7d","x":-560,"y":-460,"width":967,"height":180,"type":"text","text":"# smbclient\nsmbclient.register_session(\"10.225.128.138\", username=\"sed-agent\", password=\"1234567*\")\n#1  file = smbclient.open_file(f\"//10.225.128.138/share/sed-agent/Main/unzip.zip\", mode='rb') тут сразу открыть файл\n#2 s = smbclient.listdir(f\"//10.225.128.138/share/sed-agent/Main/unzip/\") тут посмотреть все файлы в директории\n#3 new_path = smbclient.mkdir(f\"{path}/{file}\") Создать директорию\n"}
+	],
+	"edges":[]
+}

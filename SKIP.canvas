@@ -1,0 +1,6 @@
+{
+	"nodes":[
+		{"id":"55f84ff758e8042f","x":-560,"y":-360,"width":807,"height":280,"type":"text","text":"Распаковка БД:\n1. В разрешении тар поместить ее в проект, выполнить \"tar -xvf db-34234.tar.gz\"\n2. Создать папку \"mkdir data\"\n3. Переместить в папку data/  \"mp opt/nfs-2019/ data/db\"\n4. Зайти внутрь контейнера docker exec -it <name_db> bash\n5. Подключиться к бд \"psql -U md_user --dbname=md_db\" -U это имя юзера   ИЛИ \"psql md_db md_user\" сначала имя бд, потом имя юзера\n7. Изменить пароль \"\\password\""}
+	],
+	"edges":[]
+}
