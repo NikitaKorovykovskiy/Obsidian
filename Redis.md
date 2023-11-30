@@ -1,6 +1,7 @@
 1. Его можно использовать в качестве словаря:
 # Подключение к Redis в конструкции try-except:
 *import redis 
+```python
 def check_redis_connection(): 
 	try: 
 	#Подключение к Redis 
@@ -16,4 +17,4 @@ def check_redis_connection():
 	except redis.ConnectionError as e: 
 		print(f"Ошибка подключения к Redis: {e}") 
 	except Exception as e: 
-	print(f"Произошла ошибка: {e}")*
+	print(f"Произошла ошибка: {e}")*```

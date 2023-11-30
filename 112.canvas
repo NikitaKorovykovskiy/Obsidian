@@ -1,7 +1,9 @@
 {
 	"nodes":[
 		{"id":"29bbd25c184e6cbb","type":"text","text":"Порядок запуска и подключения\n1. Скопировать и разорхивировать тестовую бд. Она в переписке с Ильей самая первая\n2. Заполнить .env в корне проекта\n3. Добавить service-account-key, его добавить в backend\nУ Назара в переписке\n4. Залогиниться на харборе \"docker login harbor.cifra-k.ru\" \"login = ccr.harbor_user\", \"password = \"x?KvHb$MFKTU$8\"\n5. Запустить контейнеры","x":-660,"y":-440,"width":866,"height":280},
-		{"id":"bbdbc5657542281e","x":-677,"y":-113,"width":883,"height":173,"type":"text","text":"Запуск проекта esia-service-python\n1. Разместить файл .env  в директории /esia. Этот файл в переписке с Антоном\n2. Удалить из зависимостей  pygost==5.11\n3. Сбилдить и запустить докер контейнер командой 'sudo docker build -t esia-test --file docker/Dockerfile . && docker run -p 8000:8080 esia-test'"}
+		{"id":"bbdbc5657542281e","type":"text","text":"Запуск проекта esia-service-python\n1. Разместить файл .env  в директории /esia. Этот файл в переписке с Антоном\n2. Удалить из зависимостей  pygost==5.11\n3. Сбилдить и запустить докер контейнер командой 'sudo docker build -t esia-test --file docker/Dockerfile . && docker run -p 8000:8080 esia-test'","x":-677,"y":-113,"width":883,"height":173},
+		{"id":"102c45809d76c36c","type":"text","text":"Настраиваемые штуки","x":393,"y":-540,"width":250,"height":60},
+		{"id":"4bd3cb44c643ac14","type":"text","text":"Фильтрация записей созданных менее 24 часов назад\nfrom datetime import timedelta # Возвращает время(1 день, 1 час и т.д.)\nfrom django.utils import timezone \nobjects.filter(create_at__gte = timezone.localtime() - timedelta(hours=24))\n","x":393,"y":-460,"width":527,"height":380}
 	],
 	"edges":[]
 }
