@@ -17,4 +17,5 @@ def check_redis_connection():
 	except redis.ConnectionError as e: 
 		print(f"Ошибка подключения к Redis: {e}") 
 	except Exception as e: 
-	print(f"Произошла ошибка: {e}")*```
+	print(f"Произошла ошибка: {e}")*
+	```
