@@ -5,7 +5,8 @@ def check_redis_connection():
 	try: 
 	#Подключение к Redis 
 	redis_host = 'localhost' 
-	redis_port = 6379 redis_connection = redis.StrictRedis(host=redis_host, port=redis_port, db=0) 
+	redis_port = 6379
+	redis_connection = redis.StrictRedis(host=redis_host, port=redis_port, db=0) 
 	#Проверка соединения - попытка выполнить команду PING к Redis 
 	response = redis_connection.ping() 
 	if response: 
