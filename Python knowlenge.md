@@ -58,7 +58,7 @@
   - [Какие декораторы стандартной библиотеки вы знаете?](#standard-library-decorators) 
   - [Что такое list comprehension, какой синтаксис создания генераторов?](#list-comprehension)
 * [Алгоритмы](#Algorithms)  
-
+[REST](REST.md)
 
 <a id="Python"></a>
 
