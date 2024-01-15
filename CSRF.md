@@ -26,9 +26,11 @@
 
 ## Методы защиты
 Существует 3 метода использования токенов для защиты web-сервисов от CSRF атак:
+- [Synchronizer Tokens](https://habr.com/ru/articles/318748/#synchronizer-tokens) (_Statefull_). Простой подход, использующийся повсеместно. Требует хранения токена на стороне сервера.
+- [Double Submit Cookie](https://habr.com/ru/articles/318748/#double-submit-cookie) (_Stateless_). Этот подход **не** требует хранения данных на стороне сервера, а значит, является **Stateless**. Используется, если вы хотите уметь быстро и качественно масштабировать свой Web-сервис горизонтально.  
+Идея в том, чтобы отдать токен клиенту двумя методами: **в куках** и в **одном из параметров ответа** (_header или внутри HTML_).
+- [Encrypted Token](https://habr.com/ru/articles/318748/#encrypted-token) (_Stateless_). Так же как и Double Submit, является **Stateless** подходом. Основная — если вы зашифруете надежным алгоритмом какие-то данные и передадите их клиенту, то клиент не сможет их подделать, не зная ключа. Этот подход не требует использования cookie. Токен передаётся клиенту только в параметрах ответа.
 
   
 
-- [Synchronizer Tokens](https://habr.com/ru/articles/318748/#synchronizer-tokens) (_Statefull_)
-- [Double Submit Cookie](https://habr.com/ru/articles/318748/#double-submit-cookie) (_Stateless_)
-- [Encrypted Token](https://habr.com/ru/articles/318748/#encrypted-token) (_Stateless_)
+В данном подходе **токеном являются факты, зашифрованные ключом**. Минимально необходимые факты — это **идентификатор пользователя** и **timestamp** времени генерации токена. Ключ не должен быть известен клиенту.
