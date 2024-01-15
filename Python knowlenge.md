@@ -59,7 +59,7 @@
   - [Что такое list comprehension, какой синтаксис создания генераторов?](#list-comprehension)
 * [Алгоритмы](#Algorithms)  
 [REST](REST.md)
-
+[CSRF](CSRF)
 <a id="Python"></a>
 
 
