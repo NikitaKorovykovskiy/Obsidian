@@ -2,8 +2,7 @@
 	"nodes":[
 		{"id":"7c122518728f8faf","type":"text","text":"### Очистка  докера и удаление кеша и volumes\n\n$docker system df - показывает занимаемое докером место на диске;\n\n$docker system prune - Удаляет весь кэш докера;\n\n$docker system prune --volumes - удаляет все тома докера;","x":-740,"y":-480,"width":535,"height":242},
 		{"id":"43342f80fa378208","type":"text","text":"Удаление всех контейнеров\n```python\ndocker rm $(docker ps -aq)\n```","x":-160,"y":-480,"width":315,"height":104},
-		{"id":"0ab61857053d08de","type":"text","text":"запуск Dockerfile из корня проекта\n```python\ndocker build -f docker/Dockerfile .\n```\n-f показывает путь до файла","x":-740,"y":-200,"width":462,"height":154},
-		{"id":"2b54248f171a3d30","x":-680,"y":-11,"width":360,"height":211,"type":"text","text":"auth_token = 'f50af498b2fc62d2587c13d00444be6ac065df1b'\n\nstate = '93a7b96b-9398-4799-a63f-4f62b35ff63f'"}
+		{"id":"0ab61857053d08de","type":"text","text":"запуск Dockerfile из корня проекта\n```python\ndocker build -f docker/Dockerfile .\n```\n-f показывает путь до файла","x":-740,"y":-200,"width":462,"height":154}
 	],
 	"edges":[]
 }
