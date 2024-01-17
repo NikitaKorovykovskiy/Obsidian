@@ -60,6 +60,8 @@
 * [Алгоритмы](#Algorithms)  
 [REST](REST.md)
 [CSRF](CSRF)
+[[Celery. Конфигурирование задач]]
+
 <a id="Python"></a>
 
 
