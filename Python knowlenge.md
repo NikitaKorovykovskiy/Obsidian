@@ -61,6 +61,7 @@
 [REST](REST.md)
 [CSRF](CSRF)
 [[Celery. Конфигурирование задач]]
+[[Docker.canvas|Docker]]
 
 <a id="Python"></a>
 

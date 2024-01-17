@@ -1,6 +1,7 @@
 {
 	"nodes":[
-		{"id":"7c122518728f8faf","type":"text","text":"### Очистка  докера и удаление кеша и volumes\n\n$docker system df - показывает занимаемое докером место на диске;\n\n$docker system prune - Удаляет весь кэш докера;\n\n$docker system prune --volumes - удаляет все тома докера;","x":-555,"y":-282,"width":535,"height":242}
+		{"id":"7c122518728f8faf","type":"text","text":"### Очистка  докера и удаление кеша и volumes\n\n$docker system df - показывает занимаемое докером место на диске;\n\n$docker system prune - Удаляет весь кэш докера;\n\n$docker system prune --volumes - удаляет все тома докера;","x":-740,"y":-480,"width":535,"height":242},
+		{"id":"43342f80fa378208","x":-203,"y":-480,"width":231,"height":68,"type":"text","text":"Удаление всех контейнеров\n```python\ndocker rm $(docker ps -aq)\n\n```"}
 	],
 	"edges":[]
 }
