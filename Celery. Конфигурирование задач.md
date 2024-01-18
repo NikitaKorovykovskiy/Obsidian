@@ -33,7 +33,8 @@ from celery import Celery app = Celery('your_celery_app') app.config_from_object
  
  
  
- **Маршрутизация** https://django.fun/docs/celery/5.1/userguide/routing/#automatic-routing
+#####  **Маршрутизация** https://django.fun/docs/celery/5.1/userguide/routing/#automatic-routing
+
 1. В качестве альтернативы можно использовать сопоставление шаблонов glob или даже регулярные выражения для сопоставления всех задач в пространстве имен `feed.tasks`
 ```python
 app.conf.task_routes = {'feed.tasks.*': {'queue': 'feeds'}}
@@ -56,7 +57,13 @@ task_routes = ([
 celery -A proj worker -Q feeds
 ```
 
-**Разбор команды**
+**Разбор команды из докер композа**
 ```python
-command: celery worker -A modules.officialsnotification -l INFO -c 1 -Q push-channel -n push_worker
+celery worker -A modules.officialsnotification -l INFO -c 1 -Q push-channel -n push_worker
 ```
+- `celery worker`: Эта команда используется для запуска Celery worker.
+- `-A modules.officialsnotification`: Опция `-A` указывает на имя (или путь) модуля, где находится объект Celery (в данном случае `officialsnotification` из пакета `modules`).
+- `-l INFO`: Устанавливает уровень журналирования на INFO, что определяет, какие сообщения будут отображаться в выводе. INFO будет отображать информацию о выполненных задачах.
+- `-c 1`: Устанавливает количество процессов для обработки задач в воркере. В данном случае установлено 1 процесс.
+- `-Q push-channel`: Указывает, какая очередь будет обрабатываться этим воркером. В данном случае установлена очередь с именем `push-channel`.
+- `-n push_worker`: Устанавливает имя воркера. В данном случае имя воркера установлено как `push_worker`.
