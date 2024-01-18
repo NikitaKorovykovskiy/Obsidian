@@ -29,3 +29,8 @@ from celery import Celery app = Celery('your_celery_app') app.config_from_object
 	export CELERY_BROKER_URL=pyamqp://guest:guest@localhost// celery -A your_celery_app worker
 ```
 	В этом случае, параметры Celery будут читаться из переменных окружения.
+
+ 
+ 
+ 
+ **Маршрутизация**
