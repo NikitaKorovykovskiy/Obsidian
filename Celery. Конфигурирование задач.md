@@ -33,4 +33,30 @@ from celery import Celery app = Celery('your_celery_app') app.config_from_object
  
  
  
- **Маршрутизация**
+ **Маршрутизация** https://django.fun/docs/celery/5.1/userguide/routing/#automatic-routing
+1. В качестве альтернативы можно использовать сопоставление шаблонов glob или даже регулярные выражения для сопоставления всех задач в пространстве имен `feed.tasks`
+```python
+app.conf.task_routes = {'feed.tasks.*': {'queue': 'feeds'}}
+```
+Если порядок соответствия шаблонов важен, то вместо этого следует указать маршрутизатор в формате _items_:
+```python
+task_routes = ([
+    ('feed.tasks.*', {'queue': 'feeds'}),
+    ('web.tasks.*', {'queue': 'web'}),
+    (re.compile(r'(video|image)\.tasks\..*'), {'queue': 'media'}),
+],)
+```
+Или указывать очередь прямо в момент создания задачки
+```python
+@celery_app.task(name='gateway.tasks.covid_sms_send', queue='sms-channel')
+```
+
+После установки маршрутизатора вы можете запустить сервер z для обработки только очереди фидов следующим образом
+```python
+celery -A proj worker -Q feeds
+```
+
+**Разбор команды**
+```python
+command: celery worker -A modules.officialsnotification -l INFO -c 1 -Q push-channel -n push_worker
+```
