@@ -3,7 +3,8 @@
   "sidePaneSideLeft": false,
   "savedColors": [
     "#ff0000",
-    "#20f86c"
+    "#20f86c",
+    "#1ff46a"
   ],
   "aviabileRegions": [
     "textEdit",
@@ -43,12 +44,12 @@
     {
       "name": "colors",
       "active": true,
-      "visible": false
+      "visible": true
     },
     {
       "name": "callouts",
       "active": true,
-      "visible": true
+      "visible": false
     }
   ]
 }
