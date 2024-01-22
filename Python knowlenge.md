@@ -62,6 +62,7 @@
 [CSRF](CSRF)
 [[Celery. + Конфигурирование задач]]
 [[Docker.canvas|Docker]]
+[[Django-channels]]
 
 <a id="Python"></a>
 
