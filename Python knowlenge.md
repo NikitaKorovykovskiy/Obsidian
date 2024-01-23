@@ -63,6 +63,8 @@
 [[Celery. + Конфигурирование задач]]
 [[Docker.canvas|Docker]]
 [[Django-channels]]
+[[Kafka]]
+
 
 <a id="Python"></a>
 
