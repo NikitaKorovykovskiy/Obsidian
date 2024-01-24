@@ -64,6 +64,8 @@
 [[Docker.canvas|Docker]]
 [[Django-channels]]
 [[Kafka]]
+[[RabbitMQ]]
+
 
 
 <a id="Python"></a>
