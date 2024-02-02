@@ -89,3 +89,5 @@ class SimpleWsConsumer(WebsocketConsumer):
         )
     self.accept() # Принять соединение
 ```
+
+https://testdriven.io/blog/django-channels/ Проект который надо сделать
