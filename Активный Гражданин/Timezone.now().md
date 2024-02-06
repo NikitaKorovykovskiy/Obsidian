@@ -3,3 +3,5 @@
 ```python
 now_time = timezone.now().astimezone(timezone.pytz.timezone('Asia/Krasnoyarsk'))
 ```
+
+Теперь время будет согласно часовому поясу
