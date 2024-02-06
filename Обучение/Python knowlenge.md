@@ -60,7 +60,7 @@
 * [Алгоритмы](#Algorithms)  
 [[INT]]
 [REST](REST.md)
-[CSRF](CSRF)
+[CSRF](CSRF.md)
 [[Celery. + Конфигурирование задач]]
 [[Docker.canvas|Docker]]
 [[Django-channels]]
