@@ -3,7 +3,7 @@
 		{"id":"7c122518728f8faf","type":"text","text":"### Очистка  докера и удаление кеша и volumes\n\n$docker system df - показывает занимаемое докером место на диске;\n\n$docker system prune - Удаляет весь кэш докера;\n\n$docker system prune --volumes - удаляет все тома докера;","x":-740,"y":-480,"width":535,"height":242},
 		{"id":"43342f80fa378208","type":"text","text":"Удаление всех контейнеров\n```python\ndocker stop $(docker ps -aq) && docker rm $(docker ps -aq)\n```","x":-160,"y":-480,"width":460,"height":160},
 		{"id":"0ab61857053d08de","type":"text","text":"запуск Dockerfile из корня проекта\n```python\ndocker build -f docker/Dockerfile .\n```\n-f показывает путь до файла","x":-740,"y":-200,"width":462,"height":154},
-		{"id":"5d849e8ee614a36b","x":-91,"y":-212,"width":374,"height":130,"type":"text","text":"Удалить все образы\n```python\ndocker rmi $(docker images -q) -f\n\n```"}
+		{"id":"5d849e8ee614a36b","type":"text","text":"Удалить все образы\n```python\ndocker rmi $(docker images -q) -f\n\n```","x":-74,"y":-200,"width":374,"height":130}
 	],
 	"edges":[]
 }
