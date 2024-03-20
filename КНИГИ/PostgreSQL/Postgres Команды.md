@@ -17,3 +17,11 @@ psql -U postgres -d postgres
 ```
 docker cp demo-small.sql postgres-db-1:/
 ```
+Внутри моего докер композа
+```
+psql -f demo-small.sql -U habrpguser -d habrdb
+```
+Затем зайти в бд
+```
+psql -U habrpguser -d demo
+```
