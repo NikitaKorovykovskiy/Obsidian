@@ -11,3 +11,9 @@ psql --username=postgres --dbname=postgres
 ```
 psql -U postgres -d postgres
 ```
+
+### Запуск скрипта для тестовой БД
+Копируем скрипт внутрь контейнера
+```
+docker cp demo-small.sql postgres-db-1:/
+```
