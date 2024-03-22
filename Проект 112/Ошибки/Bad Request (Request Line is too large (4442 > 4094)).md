@@ -1,4 +1,4 @@
-### Bad Request (Request Line is too large (4442 > 4094))
+### Bad Request (Request Line is too large (4442 больше 4094))
 Ошибка из за большой длины
 Решение в настройки gunicorn добавить ==limit-request-line==: 
 - Либо в Dockerfile  `"--limit-request-line", "8190"` :
