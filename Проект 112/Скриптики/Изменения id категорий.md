@@ -11,4 +11,4 @@ broadcast_broadcast -
 `BEGIN; UPDATE broadcast_broadcast SET group_id = 1 WHERE group_id = 5; UPDATE broadcast_broadcast SET group_level_two_id = 1 WHERE group_level_two_id = 5; COMMIT;`
 
 broadcast_broadcastgroup
-`UPDATE broadcast_broadcast SET group_id = 1 WHERE group_id = 5; UPDATE broadcast_broadcast SET group_level_two_id = 1 WHERE group_level_two_id = 5; COMMIT;`
+`BEGIN; UPDATE broadcast_broadcastgroup SET id = 1 WHERE id = 5; UPDATE broadcast_broadcastgroup SET parent_id = 1 WHERE parent_id = 5; COMMIT;`
