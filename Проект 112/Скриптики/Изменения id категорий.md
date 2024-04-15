@@ -4,10 +4,13 @@ Communal
 communal_communalpreview
 `BEGIN; UPDATE communal_communalpreview SET group_id = 1 WHERE group_id = 5; UPDATE communal_communalpreview SET group_level_two_id = 1 WHERE group_level_two_id = 5; COMMIT;`
 
-broadcast_broadcastsubscription_groups - 
+broadcast_broadcastsubscription_groups +-  999-> 1
 `BEGIN; UPDATE broadcast_broadcastsubscription_groups SET broadcastgroup_id = 1 WHERE broadcastgroup_id = 5; COMMIT;`
 
-broadcast_broadcast - 
+broadcast_broadcastpreview
+
+
+broadcast_broadcast +- 999->1 
 `BEGIN; UPDATE broadcast_broadcast SET group_id = 1 WHERE group_id = 5; UPDATE broadcast_broadcast SET group_level_two_id = 1 WHERE group_level_two_id = 5; COMMIT;`
 
 broadcast_broadcastgroup
