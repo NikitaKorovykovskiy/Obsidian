@@ -1,5 +1,7 @@
 Не получится сделать в один момент, так как много ссылающихся таблиц
 Для начала нужно создать запись с другим id,на нее перенести все связи, поменять в основной, и вернуть все связи назад
+Сделать копию записи из бд
+`insert into broadcast_broadcastgroup  (id, created_at, updated_at, name, color) select 2, created_at, updated_at, name, color from broadcast_broadcastgroup where id = 1;`
 
 Communal
 `BEGIN; UPDATE communal_communal SET group_id = 1 WHERE group_id = 5; UPDATE communal_communal SET group_level_two_id = 1 WHERE group_level_two_id = 5; COMMIT;`
