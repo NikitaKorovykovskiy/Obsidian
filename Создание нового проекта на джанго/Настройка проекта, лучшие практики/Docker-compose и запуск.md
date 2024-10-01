@@ -63,8 +63,7 @@ else
   exec "$@"  # Выполняем переданную команду, если аргумент не "server"
 fi
 ```
-$1 - это  первый переданный аргумент в команде Dokerfile
-
+$1 - это  первый переданный аргумент в команде ENTRYPOINT Dokerfile, те server (см.1)
 4. Установите `gunicorn` в `requirements.txt`
 5. Обновить docker-compose.yml
 ```
