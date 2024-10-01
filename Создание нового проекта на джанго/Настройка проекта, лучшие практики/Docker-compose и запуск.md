@@ -18,22 +18,52 @@ CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 ENTRYPOINT ["./entrypoint.sh"]
 ```
 
+Вот готовый файл Dockerfile
+```
+FROM python:3.12-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY employee_shedules/ /app/employee_shedules
+
+COPY docker/entrypoint.sh /app/docker/entrypoint.sh
+
+RUN chmod +x /app/docker/entrypoint.sh
+
+ENTRYPOINT ["sh", "/app/docker/entrypoint.sh", "server"]
+```
+
+`ENTRYPOINT ["sh", "/app/docker/entrypoint.sh", "server"]` - это эквивалентно команде `sh /app/docker/entrypoint.sh server`
+
 2. В папку с Dockerfile создать файл entrypoint.sh
 
 3. Запускать лучше через Gunicorn, так как manage.py только для теста
 ```
 #!/bin/bash
 
-echo "Apply database migrations"
-python manage.py migrate
+server() {
+  echo "Apply database migrations"
+  python manage.py migrate
 
-echo "Collect static files"
-python manage.py collectstatic --noinput
+  echo "Collect static files"
+  python manage.py collectstatic --noinput
 
-echo "Starting Gunicorn"
-gunicorn myproject.wsgi:application --bind 0.0.0.0:8000 --workers 4
+  echo "Starting Gunicorn"
+  gunicorn employee_shedules.wsgi:application --bind 0.0.0.0:8000 --workers 4
+}
 
+# Проверка переданного аргумента и вызов функции
+if [ "$1" = "server" ]; then
+  server
+else
+  exec "$@"  # Выполняем переданную команду, если аргумент не "server"
+fi
 ```
+$1 - это  первый переданный аргумент в команде Dokerfile
 
 4. Установите `gunicorn` в `requirements.txt`
 5. Обновить docker-compose.yml
