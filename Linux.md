@@ -15,3 +15,14 @@ apt update
 apt install curl
 
 ```
+
+### Установить nano
+```
+sudo apt update
+sudo apt install nano
+```
+или 
+```
+apt update
+apt install nano
+```
