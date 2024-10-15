@@ -13,7 +13,6 @@ sudo apt install curl
 ```
 apt update
 apt install curl
-
 ```
 
 ### Установить nano
